@@ -25,3 +25,9 @@
   color: rgb(68, 41, 158);
   transition: all 200ms ease;
 }
+
+.searchButton:hover {
+  background: rgb(20, 45, 76);
+  color: white;
+  cursor: pointer;
+}
