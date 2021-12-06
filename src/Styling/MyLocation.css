@@ -1,0 +1,19 @@
+.locationButton {
+  display: inline;
+  float: right;
+  background-color: rgb(255, 235, 187);
+  font-family: "Balsamiq Sans", cursive;
+  padding: 5px 20px;
+  margin-top: 30px;
+  border: solid black;
+  border-width: 0.1px;
+  border-radius: 5px;
+  color: rgb(68, 41, 158);
+  transition: all 200ms ease;
+}
+
+.locationButton:hover {
+  background: rgb(20, 45, 76);
+  color: white;
+  cursor: pointer;
+}

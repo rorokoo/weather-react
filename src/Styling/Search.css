@@ -1,0 +1,27 @@
+.search {
+  display: inline;
+}
+
+.searchBox {
+  background-color: rgb(217, 237, 253, 0.5);
+  padding-right: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-style: solid black;
+  border-radius: 5px;
+  border-width: 0.1px;
+  font-style: italic;
+  margin-top: 30px;
+  margin-right: 3px;
+}
+
+.searchButton {
+  background: rgb(217, 237, 253);
+  font-family: "Balsamiq Sans", cursive;
+  padding: 8px;
+  border: solid black;
+  border-width: 0.1px;
+  border-radius: 5px;
+  color: rgb(68, 41, 158);
+  transition: all 200ms ease;
+}

@@ -1,0 +1,24 @@
+.temp {
+  display: inline;
+  width: 200px;
+  padding-left: 30px;
+  font-size: 70px;
+  color: rgb(20, 45, 76);
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.icon {
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.celsius {
+  position: relative;
+  bottom: 30px;
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 30px;
+  text-decoration: none;
+  padding-left: 10px;
+  color: #0a58ca;
+  font-weight: bolder;
+}

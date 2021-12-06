@@ -1,0 +1,10 @@
+.day {
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: "Balsamiq Sans", cursive;
+  color: rgb(20, 45, 76, 0.6);
+}
+
+.grid {
+  margin-top: 60px;
+}
