@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Styling/Search.css";
 import MyLocation from "./MyLocation";
+import WeatherIcon from "./WeatherIcon";
 import Temp from "./Temp";
 import City from "./City";
 import FormattedDate from "./FormattedDate";
@@ -44,6 +45,7 @@ export default function Search(props) {
   }
 
   if (weatherData.ready) {
+    console.log(weatherData.icon);
     return (
       <div>
         <form className="search" onSubmit={handleSubmit}>
@@ -57,6 +59,7 @@ export default function Search(props) {
         <MyLocation />
         <City city={weatherData.city} />
         <FormattedDate date={weatherData.date} />
+        <WeatherIcon icon={weatherData.icon} />
         <Temp temp={weatherData.temperature} />
         <MoreInfo
           wind={weatherData.wind}

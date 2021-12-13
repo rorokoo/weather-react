@@ -7,9 +7,9 @@
   font-family: "Balsamiq Sans", cursive;
 }
 
-.icon {
-  margin-bottom: 15px;
-  margin-right: 15px;
+.WeatherIcon {
+  margin-bottom: 40px;
+  margin-left: 20px;
 }
 
 .celsius {
