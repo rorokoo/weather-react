@@ -45,7 +45,6 @@ export default function Search(props) {
   }
 
   if (weatherData.ready) {
-    console.log(weatherData.icon);
     return (
       <div>
         <form className="search" onSubmit={handleSubmit}>
@@ -60,7 +59,7 @@ export default function Search(props) {
         <City city={weatherData.city} />
         <FormattedDate date={weatherData.date} />
         <WeatherIcon icon={weatherData.icon} />
-        <Temp temp={weatherData.temperature} />
+        <Temp celsius={weatherData.temperature} />
         <MoreInfo
           wind={weatherData.wind}
           description={weatherData.description}

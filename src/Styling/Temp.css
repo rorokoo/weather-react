@@ -12,13 +12,11 @@
   margin-left: 20px;
 }
 
-.celsius {
+.unit {
   position: relative;
   bottom: 30px;
   font-family: "Balsamiq Sans", cursive;
   font-size: 30px;
   text-decoration: none;
-  padding-left: 10px;
-  color: #0a58ca;
-  font-weight: bolder;
+  padding-left: 20px;
 }
