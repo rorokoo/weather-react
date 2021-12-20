@@ -28,7 +28,7 @@ export default function FormattedDate(props) {
 
   let weekday = weekdays[props.date.getDay()];
   let month = months[props.date.getMonth()];
-  let day = props.date.getDay();
+  let day = props.date.getDate();
   let year = props.date.getFullYear();
 
   let hours = props.date.getHours();

@@ -30,7 +30,7 @@ export default function Search(props) {
   }
 
   function fetchData() {
-    let key = `1a9b8310a2b65284eac4c79ff72690e4`;
+    let key = `4a38f0a4e469902661c0087dd47731b6`;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
     axios.get(url).then(handleResponse);
   }
@@ -58,13 +58,17 @@ export default function Search(props) {
         <MyLocation />
         <City city={weatherData.city} />
         <FormattedDate date={weatherData.date} />
-        <WeatherIcon icon={weatherData.icon} />
+        <WeatherIcon
+          className="WeatherIcon"
+          icon={weatherData.icon}
+          size={70}
+        />
         <Temp celsius={weatherData.temperature} />
         <MoreInfo
           wind={weatherData.wind}
           description={weatherData.description}
         />
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
