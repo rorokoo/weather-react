@@ -14,7 +14,7 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    setForecast(response.data);
+    setForecast(response.data.daily);
     setReady(true);
   }
 
@@ -31,9 +31,16 @@ export default function Forecast(props) {
     return (
       <div className="forecast">
         <Row className="text-center">
-          <Col>
-            <ForecastDay data={forecast}></ForecastDay>
-          </Col>
+          {forecast.map(function (dailyForecast, index) {
+            if (index > 0 && index < 5) {
+              return (
+                <Col key={index}>
+                  <ForecastDay data={dailyForecast} />
+                </Col>
+              );
+            }
+            return null;
+          })}
         </Row>
       </div>
     );

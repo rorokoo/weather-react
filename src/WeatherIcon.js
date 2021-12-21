@@ -28,7 +28,7 @@ export default function WeatherIcon(props) {
     "10n": <WiDayRain size={props.size} />,
     "11n": <WiDayThunderstorm size={props.size} />,
     "13n": <WiDaySnow size={props.size} />,
-    "50n": <WiDayFog />,
+    "50n": <WiDayFog size={props.size} />,
   };
   return codeMapping[props.icon];
 }

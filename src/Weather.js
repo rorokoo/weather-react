@@ -1,10 +1,13 @@
 import React from "react";
 import Search from "./Search";
+import { ForecastProvider } from "./ForecastDayContext";
 
 export default function Weather() {
   return (
     <div>
-      <Search defaultCity="Tel Aviv" />
+      <ForecastProvider>
+        <Search defaultCity="Tel Aviv" />
+      </ForecastProvider>
     </div>
   );
 }

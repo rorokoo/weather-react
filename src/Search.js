@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Styling/Search.css";
-import MyLocation from "./MyLocation";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 import WeatherIcon from "./WeatherIcon";
 import Temp from "./Temp";
 import City from "./City";
@@ -8,12 +10,15 @@ import FormattedDate from "./FormattedDate";
 import MoreInfo from "./MoreInfo";
 import Forecast from "./Forecast";
 import axios from "axios";
+import { ForecastDayContext } from "./ForecastDayContext";
 
 export default function Search(props) {
   let [weatherData, setWeatherData] = useState({
     ready: false,
   });
   let [city, setCity] = useState(props.defaultCity);
+
+  let setUnit = useContext(ForecastDayContext)[1];
 
   function handleResponse(response) {
     setWeatherData({
@@ -37,6 +42,7 @@ export default function Search(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    setUnit("celsius");
     fetchData();
   }
 
@@ -50,24 +56,31 @@ export default function Search(props) {
         <form className="search" onSubmit={handleSubmit}>
           <input
             className="searchBox"
-            type="search"
+            type="text"
             onChange={handleCityChange}
           />
           <input className="searchButton" type="submit" value="Search" />
         </form>
-        <MyLocation />
+
         <City city={weatherData.city} />
         <FormattedDate date={weatherData.date} />
-        <WeatherIcon
-          className="WeatherIcon"
-          icon={weatherData.icon}
-          size={70}
-        />
-        <Temp celsius={weatherData.temperature} />
-        <MoreInfo
-          wind={weatherData.wind}
-          description={weatherData.description}
-        />
+
+        <Row>
+          <Col sm={2}>
+            <span className="WeatherIcon">
+              <WeatherIcon icon={weatherData.icon} size={70} />
+            </span>
+          </Col>
+          <Col sm={6}>
+            <Temp celsius={weatherData.temperature} />
+          </Col>
+          <Col sm={4}>
+            <MoreInfo
+              wind={weatherData.wind}
+              description={weatherData.description}
+            />
+          </Col>
+        </Row>
         <Forecast coordinates={weatherData.coordinates} />
       </div>
     );

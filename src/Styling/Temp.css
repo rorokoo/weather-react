@@ -9,7 +9,8 @@
 
 .WeatherIcon {
   position: relative;
-  bottom: 10px;
+  top: 20px;
+  left: 20px;
 }
 
 .unit {

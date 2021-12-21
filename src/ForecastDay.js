@@ -1,24 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import WeatherIcon from "./WeatherIcon";
+import { ForecastDayContext } from "./ForecastDayContext";
 
 export default function ForecastDay(props) {
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  let unit = useContext(ForecastDayContext)[0];
 
-  let date = new Date(props.data.daily[1].dt * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let date = new Date(props.data.dt * 1000);
 
   let day = days[date.getDay()];
 
-  let minTemp = Math.round(props.data.daily[1].temp.min);
-  let maxTemp = Math.round(props.data.daily[1].temp.max);
+  let min = props.data.temp.min;
+  let max = props.data.temp.max;
+
+  if (unit !== "celsius") {
+    min = (min * 9) / 5 + 32;
+    max = (max * 9) / 5 + 32;
+  }
 
   return (
     <div>
       <div className="day">{day}</div>
       <div className="dayIcon">
-        <WeatherIcon icon={props.data.daily[1].weather[0].icon} size={50} />
+        <WeatherIcon icon={props.data.weather[0].icon} size={50} />
       </div>
-      <span className="dayTempMin">{minTemp}°</span>
-      <span className="dayTempMax"> {maxTemp}°</span>
+      <span className="dayTempMin">{Math.round(min)}°</span>
+      <span className="dayTempMax"> {Math.round(max)}°</span>
     </div>
   );
 }
