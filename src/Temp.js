@@ -5,6 +5,8 @@ import { ForecastDayContext } from "./ForecastDayContext";
 export default function Temp(props) {
   let [temp, showTemp] = useState(props.celsius);
   let setUnit = useContext(ForecastDayContext)[1];
+  let [celsius, setCelsius] = useState("unit");
+  let [fahrenheit, setFahrenheit] = useState("otherUnit");
 
   useEffect(() => {
     showTemp(props.celsius);
@@ -14,21 +16,25 @@ export default function Temp(props) {
     event.preventDefault();
     showTemp(props.celsius);
     setUnit("celsius");
+    setCelsius("unit");
+    setFahrenheit("otherUnit");
   }
 
   function showFahrenheit(event) {
     event.preventDefault();
     showTemp((props.celsius * 9) / 5 + 32);
     setUnit("farenheight");
+    setFahrenheit("unit");
+    setCelsius("otherUnit");
   }
 
   return (
     <div className="temp">
       {Math.round(temp)}
-      <a href="/" className="unit" onClick={showCelsius}>
+      <a href="/" className={celsius} onClick={showCelsius}>
         °C{" "}
       </a>
-      <a href="/" className="unit" onClick={showFahrenheit}>
+      <a href="/" className={fahrenheit} onClick={showFahrenheit}>
         °F{" "}
       </a>
     </div>

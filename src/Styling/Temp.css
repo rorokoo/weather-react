@@ -21,3 +21,13 @@
   text-decoration: none;
   padding-left: 20px;
 }
+
+.otherUnit {
+  position: relative;
+  bottom: 30px;
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 30px;
+  text-decoration: none;
+  padding-left: 20px;
+  opacity: 0.3;
+}

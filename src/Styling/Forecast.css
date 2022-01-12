@@ -10,12 +10,12 @@
   font-size: 20px;
   font-family: "Balsamiq Sans", cursive;
   margin-right: 10px;
+  opacity: 0.5;
 }
 
 .dayTempMax {
   font-size: 20px;
   font-family: "Balsamiq Sans", cursive;
-  opacity: 0.5;
 }
 
 .dayIcon {
