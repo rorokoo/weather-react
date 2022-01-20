@@ -1,8 +1,10 @@
 .city {
+  display: inline-block;
   font-size: 60px;
   font-family: "Balsamiq Sans", cursive;
   color: rgb(20, 45, 76);
   font-weight: 400;
-  margin-top: 80px;
+  margin-top: 20px;
+  margin-left: 15px;
   margin-bottom: 20px;
 }

@@ -7,14 +7,12 @@ import GitLink from "./GitLink";
 
 function App() {
   return (
-    <div>
+    <Container>
       <div className="App">
-        <Container>
-          <Weather />
-        </Container>
+        <Weather />
       </div>
       <GitLink />
-    </div>
+    </Container>
   );
 }
 

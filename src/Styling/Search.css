@@ -1,5 +1,6 @@
 .search {
-  display: inline;
+  display: block;
+  margin-left: 10px;
 }
 
 .searchBox {

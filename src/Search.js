@@ -61,26 +61,25 @@ export default function Search(props) {
           />
           <input className="searchButton" type="submit" value="Search" />
         </form>
-
-        <City city={weatherData.city} />
-        <FormattedDate date={weatherData.date} />
-
         <Row>
-          <Col sm={2}>
+          <Col md={5}>
+            <City city={weatherData.city} />
+            <FormattedDate date={weatherData.date} />
+          </Col>
+          <Col md="auto">
             <span className="WeatherIcon">
-              <WeatherIcon icon={weatherData.icon} size={70} />
+              <WeatherIcon icon={weatherData.icon} size={200} />
             </span>
           </Col>
-          <Col sm={6}>
+          <Col>
             <Temp celsius={weatherData.temperature} />
-          </Col>
-          <Col sm={4}>
             <MoreInfo
-              wind={weatherData.wind}
               description={weatherData.description}
+              wind={weatherData.wind}
             />
           </Col>
         </Row>
+
         <Forecast coordinates={weatherData.coordinates} />
       </div>
     );

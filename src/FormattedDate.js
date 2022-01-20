@@ -39,13 +39,13 @@ export default function FormattedDate(props) {
   }
 
   return (
-    <div className="FormattedDate">
+    <span className="FormattedDate">
       <h3>
         updated at {hours}:{minutes}
       </h3>
       <h3>
         {weekday}, {month} {day}, {year}
       </h3>
-    </div>
+    </span>
   );
 }
