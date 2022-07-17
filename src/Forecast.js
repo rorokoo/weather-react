@@ -9,6 +9,8 @@ export default function Forecast(props) {
   let [ready, setReady] = useState(false);
   let [forecast, setForecast] = useState(null);
 
+  console.log("render");
+
   useEffect(() => {
     setReady(false);
   }, [props.coordinates]);
@@ -21,13 +23,14 @@ export default function Forecast(props) {
   function fetchData() {
     let lon = props.coordinates.lon;
     let lat = props.coordinates.lat;
+    console.log(lon);
+    console.log(lat);
     let key = `4a38f0a4e469902661c0087dd47731b6`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${key}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   if (ready) {
-    console.log(true);
     return (
       <div className="forecast">
         <Row className="text-center">
@@ -39,13 +42,13 @@ export default function Forecast(props) {
                 </Col>
               );
             }
+
             return null;
           })}
         </Row>
       </div>
     );
   } else {
-    console.log(false);
     fetchData();
     return null;
   }
