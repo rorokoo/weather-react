@@ -1,6 +1,7 @@
 .FormattedDate h3 {
   font-size: 23px;
   color: rgba(20, 45, 76, 0.6);
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Balsamiq Sans", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
   margin-left: 14px;
 }
