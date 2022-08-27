@@ -32,3 +32,9 @@
   color: white;
   cursor: pointer;
 }
+
+@media (max-width: 360px) {
+  .searchBox {
+    padding-right: 80px;
+  }
+}

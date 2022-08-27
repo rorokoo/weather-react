@@ -22,3 +22,25 @@
 .otherUnit {
   margin-left: 15px;
 }
+
+@media (max-width: 360px) {
+  .col-md-auto {
+    width: 140px;
+  }
+  .WeatherIcon svg {
+    display: inline;
+    height: 150px;
+    width: 150px;
+  }
+  .temp {
+    font-size: 50px;
+    text-align: center;
+    color: rgb(20, 45, 76);
+    font-family: "Balsamiq Sans", cursive;
+    width: 100px;
+  }
+
+  .units a {
+    position: static;
+  }
+}

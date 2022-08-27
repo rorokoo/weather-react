@@ -27,3 +27,18 @@
   margin-top: 30px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 360px) {
+  .text-center.row {
+    width: 360px;
+  }
+
+  .dayTempMin {
+    display: block;
+    margin-right: 0px;
+  }
+
+  .dayTempMax {
+    display: block;
+  }
+}
