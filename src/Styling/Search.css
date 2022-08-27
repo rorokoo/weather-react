@@ -18,7 +18,8 @@
 
 .searchButton {
   background: rgb(217, 237, 253);
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Balsamiq Sans", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
   padding: 8px;
   border: solid black;
   border-width: 0.1px;
