@@ -1,11 +1,10 @@
 .search {
-  display: block;
   margin-left: 10px;
 }
 
 .searchBox {
   background-color: rgb(217, 237, 253, 0.5);
-  padding-right: 100px;
+  width: 300px;
   padding-top: 8px;
   padding-bottom: 8px;
   border-width: 0.5px;
@@ -36,6 +35,6 @@
 
 @media (min-width: 320px) and (max-width: 641px) {
   .searchBox {
-    padding-right: 20%;
+    width: 70%;
   }
 }
