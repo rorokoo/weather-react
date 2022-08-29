@@ -10,8 +10,8 @@ function App() {
     <Container>
       <div className="App">
         <Weather />
+        <GitLink />
       </div>
-      <GitLink />
     </Container>
   );
 }

@@ -31,11 +31,7 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 360px) {
-  .text-center.row {
-    width: 360px;
-  }
-
+@media (min-width: 320px) and (max-width: 641px) {
   .dayTempMin {
     display: block;
     margin-right: 0px;
