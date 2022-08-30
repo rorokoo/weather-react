@@ -1,9 +1,13 @@
+.row {
+  --bs-gutter-x: 0;
+}
+
 .search {
   margin-left: 10px;
 }
 
 .searchBox {
-  background-color: rgb(217, 237, 253, 0.5);
+  background-color: rgb(217, 237, 253, 0.3);
   width: 300px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -16,14 +20,15 @@
 }
 
 .searchButton {
-  background: rgb(217, 237, 253);
+  background: white;
+  font-weight: 700;
   font-family: "Balsamiq Sans", "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
   padding: 8px;
   border: solid black;
   border-width: 0.1px;
   border-radius: 5px;
-  color: rgb(68, 41, 158);
+  color: black;
   transition: all 200ms ease;
 }
 
@@ -36,5 +41,15 @@
 @media (min-width: 320px) and (max-width: 641px) {
   .searchBox {
     width: 70%;
+  }
+
+  .WeatherIcon svg {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    min-width: 100px;
+    max-width: 200px;
+    max-height: 200px;
   }
 }

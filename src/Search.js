@@ -61,12 +61,13 @@ export default function Search(props) {
           />
           <input className="searchButton" type="submit" value="Search" />
         </form>
+
         <Row>
-          <Col md={5}>
+          <Col sm={6} md={6} lg="auto">
             <City city={weatherData.city} />
             <FormattedDate date={weatherData.date} />
           </Col>
-          <Col md="auto">
+          <Col>
             <span className="WeatherIcon">
               <WeatherIcon icon={weatherData.icon} size={200} />
             </span>
