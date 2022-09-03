@@ -58,6 +58,7 @@ export default function Search(props) {
           <input
             className="searchBox"
             type="text"
+            placeholder="Type location..."
             onChange={handleCityChange}
           />
           <input className="searchButton" type="submit" value="Search" />
