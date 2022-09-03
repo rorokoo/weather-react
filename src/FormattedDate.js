@@ -31,7 +31,7 @@ export default function FormattedDate(props) {
   return (
     <span className="FormattedDate">
       <h3>
-        updated at {hours}:{minutes}
+        Updated at {hours}:{minutes}
       </h3>
       <h3>
         {month} {day}, {year}
