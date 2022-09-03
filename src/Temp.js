@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Units from "./Units";
 import "./Styling/Temp.css";
 import { ForecastDayContext } from "./ForecastDayContext";
 
@@ -11,5 +12,10 @@ export default function Temp(props) {
     temp = (props.celsius * 9) / 5 + 32;
   }
 
-  return <div className="temp">{Math.round(temp)}</div>;
+  return (
+    <div className="temp">
+      {Math.round(temp)}
+      <Units></Units>
+    </div>
+  );
 }

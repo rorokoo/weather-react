@@ -6,3 +6,9 @@
     "Trebuchet MS", sans-serif;
   margin-left: 14px;
 }
+
+@media (min-width: 320px) and (max-width: 641px) {
+  .FormattedDate h3 {
+    font-size: 3vh;
+  }
+}

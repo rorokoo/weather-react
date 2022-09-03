@@ -6,9 +6,6 @@
   color: rgb(20, 45, 76, 0.6);
 }
 
-.forecastTemp {
-}
-
 .dayTempMin {
   font-size: 20px;
   font-family: "Balsamiq Sans", "Gill Sans", "Gill Sans MT", Calibri,
@@ -31,20 +28,29 @@
 }
 
 .forecast {
+  position: relative;
+  top: 10px;
   margin-top: 30px;
 }
 
 @media (min-width: 320px) and (max-width: 641px) {
+  .day {
+    font-size: 3vh;
+  }
   .dayTempMin {
+    font-size: 3vh;
     display: block;
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   .dayTempMax {
+    font-size: 3vh;
     display: block;
   }
 
   .dayIcon svg {
-    margin: 15px auto;
+    width: 30px;
+    height: 30px;
+    margin: 5% auto;
   }
 }

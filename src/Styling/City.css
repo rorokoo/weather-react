@@ -12,4 +12,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 641px) {
+  .city {
+    font-size: 9vh;
+  }
 }

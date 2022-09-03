@@ -28,16 +28,17 @@
 
 @media (min-width: 320px) and (max-width: 641px) {
   .units a {
-    bottom: none;
+    position: relative;
   }
 
   .WeatherIcon svg {
+    margin-top: 10px;
     float: none;
     width: 70%;
     height: 70%;
   }
 
   .temp {
-    font-size: 70px;
+    font-size: 12vh;
   }
 }
