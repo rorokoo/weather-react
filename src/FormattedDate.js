@@ -2,15 +2,6 @@ import React from "react";
 import "./Styling/FormattedDate.css";
 
 export default function FormattedDate(props) {
-  let weekdays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-  ];
-
   let months = [
     "January",
     "February",
@@ -26,7 +17,6 @@ export default function FormattedDate(props) {
     "December",
   ];
 
-  let weekday = weekdays[props.date.getDay()];
   let month = months[props.date.getMonth()];
   let day = props.date.getDate();
   let year = props.date.getFullYear();
@@ -44,7 +34,7 @@ export default function FormattedDate(props) {
         updated at {hours}:{minutes}
       </h3>
       <h3>
-        {weekday}, {month} {day}, {year}
+        {month} {day}, {year}
       </h3>
     </span>
   );

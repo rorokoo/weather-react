@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 
 import WeatherIcon from "./WeatherIcon";
 import Temp from "./Temp";
+import Units from "./Units";
 import City from "./City";
 import FormattedDate from "./FormattedDate";
 import MoreInfo from "./MoreInfo";
@@ -63,7 +64,7 @@ export default function Search(props) {
         </form>
 
         <Row>
-          <Col sm={6} md={6} lg="auto">
+          <Col md="auto" sm={6}>
             <City city={weatherData.city} />
             <FormattedDate date={weatherData.date} />
           </Col>
@@ -74,6 +75,7 @@ export default function Search(props) {
           </Col>
           <Col>
             <Temp celsius={weatherData.temperature} />
+            <Units />
             <MoreInfo
               description={weatherData.description}
               wind={weatherData.wind}
